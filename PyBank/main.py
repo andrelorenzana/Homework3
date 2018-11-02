@@ -23,9 +23,6 @@ def main():
             else:
                 changes.append(current_profit)
 
-            max_change = max(changes)
-            min_change = min(changes)
-
             if max_change < max(changes):
                 max_change = max(changes)
                 max_change_month = financial_data[i][0]
@@ -43,6 +40,8 @@ Average Change: ${}\n
 Greatest Increase in Profits: {} (${})\n
 Greatest Decrease in Profits: {} (${})\n""".format(months, net_change, average_change,
         max_change_month, max_change, min_change_month, min_change)
+
+    print(analysis_string)
 
     with open('financial_analysis_output.txt', 'w', newline = '', encoding='utf-8') as output_file:
         output_file.write(analysis_string)
