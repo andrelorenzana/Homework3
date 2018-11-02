@@ -31,7 +31,7 @@ def main():
                 min_change = min(changes)
                 min_change_month = financial_data[i][0]
 
-    average_change = sum(changes)/months
+    average_change = round(sum(changes)/months, 2)
 
     analysis_string = """----------------------------\nFinancial Analysis\n----------------------------\n
 Total Months: {}\n
